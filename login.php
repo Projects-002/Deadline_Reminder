@@ -51,11 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     // Redirect user to the dashboard page
                     if ($user['role'] == 'student') {
-                        header("location: Dashboard/student.php");
+                        header("location: Dashboard/student.php?uid=" . $user['id']);
                     } elseif ($user['role'] == 'faculty') {
-                        header("location: Dashboard/faculty.php");
+
+                        header("location: Dashboard/faculty.php?uid=" . $user['id']);
                     } elseif ($user['role'] == 'admin') {
-                        header("location: Dashboard/admin.php");
+                        header("location: Dashboard/admin.php?uid=" . $user['id']);
                     }
                 } else {
                     echo "<script>alert('Invalid email or password');</script>";
@@ -71,6 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->close();
     }
 }
+
+
+
+
 
 
 
@@ -114,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Login</button>
             </form>
-            <p class="text-center mt-3">Don't have an account? <a href="register.php">Sign Up</a></p>
+            <p class="text-center mt-3">Don't have an account? <a href="signup.html">Sign Up</a></p>
         </div>
     </div>
 </body>

@@ -24,7 +24,7 @@
         <div class="dashboard-container">
             <h2 class="text-center">Faculty Dashboard</h2>
             <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">Manage Project Deadlines</a>
+                <a href="Faculty_operation/submit.php" class="list-group-item list-group-item-action">Create Projects</a>
                 <a href="#" class="list-group-item list-group-item-action">View Submissions</a>
                 <a href="#" class="list-group-item list-group-item-action">Communicate with Students</a>
             </div>

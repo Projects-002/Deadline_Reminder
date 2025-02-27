@@ -1,3 +1,12 @@
+<?php
+$id = $_GET['uid'];
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +34,10 @@
             <h2 class="text-center">Student Dashboard</h2>
             <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action">View Submission Deadlines</a>
-                <a href="#" class="list-group-item list-group-item-action">Submit Project</a>
-                <a href="#" class="list-group-item list-group-item-action">Track Submission Status</a>
+                <?php
+                echo '<a class="list-group-item list-group-item-action" href="user_operation/response.php?uid='.$id.'" >Submit Project</a>';
+                ?>
+            <a href="#" class="list-group-item list-group-item-action">Track Submission Status</a>
             </div>
             <div class="text-center mt-3">
                 <button class="btn btn-danger">Logout</button>
